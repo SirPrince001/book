@@ -64,7 +64,7 @@ exports.updateBookById = async (request, response) => {
   try {
     // set data to update the book with
   //let bookId = request.params.id;
-    let { book_title, author_name, age, genre } = request.body;
+    let { book_title, author_name, book_image_link,book_link,age, genre } = request.body;
     // if (!mongooose.isValidObjectId(bookId))
     //   throw new ResponseError(
     //     400,
@@ -78,7 +78,7 @@ exports.updateBookById = async (request, response) => {
     // });
 
    let updateBook =  await Book.findByIdAndUpdate(request.params.id, {
-       book_title,author_name, age,genre
+       book_title,author_name,book_image_link,book_link, age,genre
    },{new:true});
     return new Response(200, {
       status: "Success",
