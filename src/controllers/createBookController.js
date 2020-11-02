@@ -4,7 +4,7 @@ const mongooose = require("mongoose");
 require("dotenv").config();
 
 exports.createBook = async (request, response) => {
-  let { book_title, author_name, age, genre } = request.body;
+  let { book_title, author_name, book_image_link, book_link, age, genre } = request.body;
 
   //check if a book with the same name exist
 
@@ -15,6 +15,8 @@ exports.createBook = async (request, response) => {
     let newBook = new Book({
       book_title,
       author_name,
+      book_image_link,
+      book_link,
       age,
       genre,
     });

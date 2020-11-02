@@ -10,6 +10,14 @@ const books_Schema = new Schema({
         type:String,
         required:true
     },
+    book_image_link:{
+        type:String,
+        required:true
+    },
+    book_link:{
+        type:String,
+        required:true
+    },
 
     age:{
         type:Number,
