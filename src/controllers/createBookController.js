@@ -87,7 +87,7 @@ exports.updateBookById = async (request, response) => {
   } catch (error) {
     throw new ResponseError(
       400,
-      `Sorry, We could not update any book by ID due to the error ${error}`
+      `Sorry, We could not update any book by ID due to the error ${error.message}`
     );
   }
 };
@@ -102,7 +102,7 @@ exports.deleteBookById = async (request, response) => {
   } catch (error) {
     throw new ResponseError(
       400,
-      `Sorry, We could not delete any book by ID due to the error ${error}`
+      `Sorry, We could not delete any book by ID due to the error ${error.message}`
     );
   }
 };
